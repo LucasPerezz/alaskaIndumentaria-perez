@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100&family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+.fontType{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 25px;
+}
+
+.tittleFontType{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
