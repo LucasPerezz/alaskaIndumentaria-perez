@@ -1,4 +1,5 @@
 import './Navbar.css'
+import CartWidjet from './../CartWidjet/CartWidjet'
 
 function Nabvar () {
     return(
@@ -21,6 +22,7 @@ function Nabvar () {
         </li>
       </ul>
     </div>
+    <CartWidjet />
 </nav>
     ) 
 }
