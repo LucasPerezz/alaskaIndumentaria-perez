@@ -5,7 +5,8 @@ import ItemCount from "../ItemCount/ItemCount";
 
 
 
-const ItemListContainer = ( {nombreProducto, precioProducto, imagenProducto, stockProducto} ) => {
+const ItemListContainer = ( {nombreProducto, precioProducto, imagenProducto} ) => {
+
   return (
     <div>
       <Card>
@@ -18,10 +19,9 @@ const ItemListContainer = ( {nombreProducto, precioProducto, imagenProducto, sto
         </Card.Content>
         <Card.Content extra>
           <br></br>
-          <ItemCount />
+          <ItemCount/>
           <br></br>
           <Button content='Comprar' secondary />
-
         </Card.Content>
       </Card>
     </div>

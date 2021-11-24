@@ -8,7 +8,7 @@ const ItemCount = () => {
 
 
   const handlerCounterUp = () => {
-    if(counter != 0) {
+    if(counter < 5) {
 
       setCounter (counter + 1)
     }
@@ -20,6 +20,7 @@ const ItemCount = () => {
       setCounter (counter - 1)
     }
   }
+
 
   return (
     <Fragment>
