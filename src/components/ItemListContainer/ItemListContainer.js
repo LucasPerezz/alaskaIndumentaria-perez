@@ -1,10 +1,11 @@
 import React from "react";
-import { Card, Icon, Image, Button } from "semantic-ui-react";
+import { Card, Image, Button } from "semantic-ui-react";
 import "./ItemListContainer.css";
+import ItemCount from "../ItemCount/ItemCount";
 
 
 
-const ItemListContainer = ( {nombreProducto, precioProducto, imagenProducto} ) => {
+const ItemListContainer = ( {nombreProducto, precioProducto, imagenProducto, stockProducto} ) => {
   return (
     <div>
       <Card>
@@ -16,7 +17,9 @@ const ItemListContainer = ( {nombreProducto, precioProducto, imagenProducto} ) =
           </Card.Meta>
         </Card.Content>
         <Card.Content extra>
- 
+          <br></br>
+          <ItemCount />
+          <br></br>
           <Button content='Comprar' secondary />
 
         </Card.Content>
