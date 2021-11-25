@@ -1,14 +1,15 @@
 import React, { Fragment, useState } from "react";
 import { Button, Icon } from "semantic-ui-react";
 
+
 import './ItemCount.css'
 
-const ItemCount = () => {
+const ItemCount = ({stock}) => {
   const [counter, setCounter] = useState(1)
 
 
   const handlerCounterUp = () => {
-    if(counter < 5) {
+    if(counter < stock) {
 
       setCounter (counter + 1)
     }
