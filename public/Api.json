@@ -4,6 +4,7 @@
         "imagen": "https://i.ibb.co/SxDd9B8/Whats-App-Image-2021-11-17-at-22-57-30.jpg",
         "nombre": "Body Fruncido",
         "precio": 1070,
+        "genero": "mujer",
         "stock": 3
     },
     {
@@ -11,6 +12,7 @@
         "imagen": "https://i.ibb.co/b1CWhdn/Whats-App-Image-2021-11-17-at-22-57-30-1.jpg",
         "nombre": "Biker NikePro",
         "precio": 1700,
+        "genero": "mujer",
         "stock": 1
     },
     {
@@ -18,6 +20,7 @@
         "imagen": "https://i.ibb.co/JK75j3H/Whats-App-Image-2021-11-17-at-22-57-31.jpg",
         "nombre": "Body Con Broche",
         "precio": 1000,
+        "genero": "mujer",
         "stock": 1
     },
     {
@@ -25,6 +28,7 @@
         "imagen": "https://i.ibb.co/j3SkKPb/Whats-App-Image-2021-11-17-at-22-57-33.jpg",
         "nombre": "Short Adidas",
         "precio": 1400,
+        "genero": "hombre",
         "stock": 2
     },
     {
@@ -32,6 +36,7 @@
         "imagen": "https://i.ibb.co/MPLj37q/Whats-App-Image-2021-11-17-at-22-57-37.jpg",
         "nombre": "Remera Seleccion Argentina",
         "precio": 1500,
+        "genero": "hombre",
         "stock": 4
     },
     {
@@ -39,6 +44,7 @@
         "imagen": "https://i.ibb.co/z2k0r37/Whats-App-Image-2021-11-17-at-22-57-24.jpg",
         "nombre": "Biker Negra",
         "precio": 1400,
+        "genero": "mujer",
         "stock": 2
     },
     {
@@ -46,6 +52,7 @@
         "imagen": "https://i.ibb.co/cwz4T1M/Whats-App-Image-2021-11-17-at-22-57-27-1.jpg",
         "nombre": "Camisa Corta Batik",
         "precio": 1360,
+        "genero": "mujer",
         "stock": 1
     },
     {
@@ -53,6 +60,7 @@
         "imagen": "https://i.ibb.co/0DhWk1s/Whats-App-Image-2021-11-17-at-22-57-27.jpg",
         "nombre": "Musculosa Volado",
         "precio": 810,
+        "genero": "mujer",
         "stock": 3
     },
     {
@@ -60,7 +68,56 @@
         "imagen": "https://i.ibb.co/7GDFWHK/Whats-App-Image-2021-11-17-at-22-57-35.jpg",
         "nombre": "Remera SKR Azul",
         "precio": 1200,
+        "genero": "hombre",
         "stock": 4
+    },
+    {
+        "id": 10,
+        "imagen": "https://i.ibb.co/HxFdqDP/Whats-App-Image-2021-11-17-at-22-57-33.jpg",
+        "nombre": "Jean Short",
+        "precio": 1360,
+        "genero": "mujer",
+        "stock": 2
+    },
+    {
+        "id": 11,
+        "imagen": "https://i.ibb.co/1Kt7dKt/Whats-App-Image-2021-11-17-at-22-57-35.jpg",
+        "nombre": "Remera Lisa",
+        "precio": 900,
+        "genero": "hombre",
+        "stock": 4
+    },
+    {
+        "id": 12,
+        "imagen": "https://i.ibb.co/hfkgPWY/Whats-App-Image-2021-11-17-at-22-57-34-2.jpg",
+        "nombre": "Remera con Estampado Violeta",
+        "precio": 1020,
+        "genero": "hombre",
+        "stock": 2
+    },
+    {
+        "id": 13,
+        "imagen": "https://i.ibb.co/1MdNhYK/Whats-App-Image-2021-11-17-at-22-57-31.jpg",
+        "nombre": "Short de Gabardina Lacoste",
+        "precio": 2380,
+        "genero": "hombre",
+        "stock": 3
+    },
+    {
+        "id": 14,
+        "imagen": "https://i.ibb.co/QNXpTxc/Whats-App-Image-2021-11-17-at-22-57-33-1.jpg",
+        "nombre": "Short Adidas Grey",
+        "precio": 1400,
+        "genero": "hombre",
+        "stock": 2
+    },
+    {
+        "id": 15,
+        "imagen": "https://i.ibb.co/12snqG7/Whats-App-Image-2021-11-17-at-22-57-28-1.jpg",
+        "nombre": "Remera Amplia",
+        "precio": 1100,
+        "genero": "mujer",
+        "stock": 2
     }
 
 ]
