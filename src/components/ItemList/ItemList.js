@@ -10,10 +10,8 @@ const ItemList = ( {productos} ) => {
   return(
     <div className="container cardsContainer">
     {productos.map((producto) => {
-      return(
-        <Link to={`/detail/${[producto.id]}`}>
-         <Item info={producto} key={producto.id}/>
-         </Link>
+      return(      
+         <Item info={producto} />
          )
     })}
     </div>

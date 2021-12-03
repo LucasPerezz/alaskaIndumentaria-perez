@@ -7,7 +7,7 @@ import ItemCount from "../ItemCount/ItemCount";
 const Item = ({ info }) => {
   return (
     <div>
-      <Card>
+      <Card key={info.id}>
         <Image
           src={info.imagen}
           alt="Whats-App-Image-2021-11-17-at-22-57-24"

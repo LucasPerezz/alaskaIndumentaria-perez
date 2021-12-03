@@ -131,6 +131,7 @@ const items = [
 const ItemDetailContainer = () => {
     const {id} = useParams()
     const [itemDetail, setItemDetail] = useState({})
+    const [loading, setLoading] = useState(true)
 
     let getItem = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -147,16 +148,25 @@ const ItemDetailContainer = () => {
         if (id) {
             getItem.then(res => {setItemDetail(res.find(item => item.id === parseInt(id)))})
                     .catch(err => console.log(err))
+                    .finally(() => setLoading(false))
         }  else {
             getItem.then( res => { setItemDetail (res)})
-                    .catch(err(err => console.log(err)))
+                    .catch(err => console.log(err))
+                    .finally(() => setLoading(false))
         }
 
     })
-
+    
         return (
-            <div>
-                <ItemDetail item={itemDetail}/>
+            <div className="container d-flex justify-content-center my-5">
+                
+                {
+                    loading ?  <Loader active />
+                    :
+                    <ItemDetail item={itemDetail}/>
+
+                }
+
                 
             </div>
         )

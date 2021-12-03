@@ -6,13 +6,14 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 //COMPONENTS
 import Nabvar from './components/Navbar/Navbar';
-import ItemDetail from './components/ItemDetail/ItemDetail';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
-//VIEWS
-import Mujer from './components/views/Mujer/Mujer';
-import Hombre from './components/views/Hombre/Hombre';
-import Contacto from './components/views/Contacto/Contacto';
+
+// //VIEWS
+// import Mujer from './components/views/Mujer/Mujer';
+// import Hombre from './components/views/Hombre/Hombre';
+// import Contacto from './components/views/Contacto/Contacto';
 
 
 
@@ -25,15 +26,13 @@ class App extends Component{
         <Nabvar />
 
         <Routes>
-          <Route path="/mujer" element={<Mujer />} />
-          <Route path="/hombre" element={<Hombre />} />
-          <Route path="/contacto" element={<Contacto />} />
+            <Route path='/genero/:generoID' element={<ItemListContainer />} />
         </Routes>
         <Routes>
           <Route path='/' element={<ItemListContainer />}/>
         </Routes>
         <Routes>
-          <Route path='/item/:id' element={<ItemDetail />} />
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
         </Routes>
         </Router>
       </Fragment>

@@ -14,10 +14,10 @@ function Nabvar () {
         <Link to="/" className="nav-link active fontType nav-link" aria-current="page">Inicio</Link>
         </li>
         <li class="nav-item">
-        <Link to="/mujer" className="nav-link active fontType nav-link" aria-current="page">Mujer</Link>
+        <Link to="/genero/mujer" className="nav-link active fontType nav-link" aria-current="page">Mujer</Link>
         </li>
         <li class="nav-item">
-        <Link to="/hombre" className="nav-link active fontType nav-link" aria-current="page">Hombre</Link>
+        <Link to="/genero/hombre" className="nav-link active fontType nav-link" aria-current="page">Hombre</Link>
         </li>
         <li class="nav-item">
         <Link to="/contacto" className="nav-link active fontType nav-link" aria-current="page">Contacto</Link>
