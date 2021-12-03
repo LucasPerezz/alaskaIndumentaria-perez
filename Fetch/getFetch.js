@@ -1,10 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import { Loader } from 'semantic-ui-react'
-
-
-const items = [
+const productos = [
+    
     {
         id: 1,
         imagen: "https://i.ibb.co/SxDd9B8/Whats-App-Image-2021-11-17-at-22-57-30.jpg",
@@ -128,41 +123,18 @@ const items = [
 
 ]
 
-const ItemDetailContainer = () => {
-    const {id} = useParams()
-    const [itemDetail, setItemDetail] = useState({})
+const getFetch = new Promise ((resolve, reject) => {
+    const condition = true
 
-    let getItem = new Promise((resolve, reject) => {
+    if (condition) {
         setTimeout(() => {
-            items ? resolve(items) : reject('error 404')
-            console.log("item", resolve)
+            resolve(productos)
         }, 2000)
-    })
-
-    useEffect(() => {
-        // id ? getItem.then(res => {setItemDetail(res.find(a => a.id === parseInt(id)))})
-        //             .catch(err => console.log(err))
-        //     :getItem.then(res => {setItemDetail(res)})
-        //     .catch(err => console.log(err))
-        if (id) {
-            getItem.then(res => {setItemDetail(res.find(item => item.id === parseInt(id)))})
-                    .catch(err => console.log(err))
-        }  else {
-            getItem.then( res => { setItemDetail (res)})
-                    .catch(err(err => console.log(err)))
-        }
-
-    })
-
-        return (
-            <div>
-                <ItemDetail item={itemDetail}/>
-                
-            </div>
-        )
+    } else {
+        setTimeout(() => {
+            reject('error 404')
+        }, 2000)
     }
-// }
+})
 
-export default ItemDetailContainer
-
-
+export default getFetch

@@ -3,14 +3,18 @@ import './ItemList.css'
 
 
 import Item from '../Item/Item'
+import { Link } from 'react-router-dom';
 
 const ItemList = ( {productos} ) => {
-  console.log(ItemList)
 
   return(
     <div className="container cardsContainer">
     {productos.map((producto) => {
-      return <Item info={producto} />
+      return(
+        <Link to={`/detail/${[producto.id]}`}>
+         <Item info={producto} key={producto.id}/>
+         </Link>
+         )
     })}
     </div>
 
