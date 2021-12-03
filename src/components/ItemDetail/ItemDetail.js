@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Card, Image, Button } from "semantic-ui-react";
 
 import ItemCount from "../ItemCount/ItemCount";

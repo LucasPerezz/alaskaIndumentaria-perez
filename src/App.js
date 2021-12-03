@@ -10,10 +10,6 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 
 
 
-// //VIEWS
-// import Mujer from './components/views/Mujer/Mujer';
-// import Hombre from './components/views/Hombre/Hombre';
-// import Contacto from './components/views/Contacto/Contacto';
 
 
 

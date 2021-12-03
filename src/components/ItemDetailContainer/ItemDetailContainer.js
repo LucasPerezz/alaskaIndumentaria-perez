@@ -141,10 +141,7 @@ const ItemDetailContainer = () => {
     })
 
     useEffect(() => {
-        // id ? getItem.then(res => {setItemDetail(res.find(a => a.id === parseInt(id)))})
-        //             .catch(err => console.log(err))
-        //     :getItem.then(res => {setItemDetail(res)})
-        //     .catch(err => console.log(err))
+
         if (id) {
             getItem.then(res => {setItemDetail(res.find(item => item.id === parseInt(id)))})
                     .catch(err => console.log(err))

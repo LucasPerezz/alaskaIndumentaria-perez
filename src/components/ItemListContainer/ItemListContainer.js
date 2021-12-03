@@ -36,14 +36,7 @@ const ItemListContainer = () => {
     }
   }, [generoID])
   
-  // useEffect(() => {
-  //   setLoading(true)
-  //   setTimeout(() => {
-  //     fetch('Api.json')
-  //     .then((Response) => Response.json())
-  //     .then((json) => setProductos(json)); setLoading(false)
-  //   }, 2000)
-  // }, [])
+
 
   
   
