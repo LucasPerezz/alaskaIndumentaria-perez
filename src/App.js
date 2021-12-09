@@ -7,6 +7,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 //COMPONENTS
 import Nabvar from './components/Navbar/Navbar';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
 
 
 
@@ -29,6 +30,9 @@ class App extends Component{
         </Routes>
         <Routes>
           <Route path='/item/:id' element={<ItemDetailContainer />} />
+        </Routes>
+        <Routes>
+          <Route path='/cart' element={<Cart />} />
         </Routes>
         </Router>
       </Fragment>

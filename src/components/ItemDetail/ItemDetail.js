@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card, Image, Button } from "semantic-ui-react";
 
 import ItemCount from "../ItemCount/ItemCount";
@@ -28,7 +29,9 @@ const ItemDetail = ({item}) => {
           <ItemCount stock={item.stock} />
           <br></br>
             <br></br>
+            <Link to='/cart'>
             <Button content="Comprar" secondary />
+            </Link>
             <br></br>
         </Card.Content>
       </Card>
