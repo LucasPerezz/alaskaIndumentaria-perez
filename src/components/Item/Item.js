@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import ItemCount from "../ItemCount/ItemCount";
 
-const Item = ({ info }) => {
+const Item = ({ info, addItem, item }) => {
   return (
     <div>
       <Card key={info.id}>
@@ -19,12 +19,10 @@ const Item = ({ info }) => {
         <Card.Content>
           <Card.Header>{info.nombre}</Card.Header>
           <Card.Meta>
-            <span className="date">{info.precio}</span>
+            <span className="date">${info.precio}</span>
           </Card.Meta>
         </Card.Content>
         <Card.Content extra>
-          <ItemCount stock={info.stock} />
-          <br></br>
           <Link to={`/item/${info.id}`}>
             <br></br>
             <Button content="Comprar" secondary />

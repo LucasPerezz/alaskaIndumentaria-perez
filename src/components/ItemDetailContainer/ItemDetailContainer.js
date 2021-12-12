@@ -4,7 +4,7 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { Loader } from 'semantic-ui-react'
 
 
-const items = [
+export const items = [
     {
         id: 1,
         imagen: "https://i.ibb.co/SxDd9B8/Whats-App-Image-2021-11-17-at-22-57-30.jpg",
