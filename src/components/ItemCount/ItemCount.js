@@ -3,7 +3,7 @@ import { Button, Icon } from "semantic-ui-react";
 
 import "./ItemCount.css";
 
-const ItemCount = ({ item, stock, addItem }) => {
+const ItemCount = ({ item, stock, addItem, onAdd }) => {
   const [counter, setCounter] = useState(1);
 
   const handlerCounterUp = () => {
@@ -30,7 +30,9 @@ const ItemCount = ({ item, stock, addItem }) => {
         </Button>
       </div>
       <div className="my-2">
-        <Button content="Comprar" negative onClick={() => addItem(item, counter)} />
+        <Button content="Comprar" negative onClick={() => {
+          addItem(item, counter)
+          onAdd(true)}}/>
       </div>
     </Fragment>
   );

@@ -38,7 +38,7 @@ const ItemDetail = ({ item }) => {
               add ?
               <Card.Header>Añadido</Card.Header>
               :
-              <ItemCount item={item} stock={item.stock} addItem={addItem} />
+              <ItemCount item={item} stock={item.stock} addItem={addItem} onAdd={onAdd}/>
             }
           </div>
           <div>
