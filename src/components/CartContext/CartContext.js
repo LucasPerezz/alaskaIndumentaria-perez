@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { createContext } from 'react'
-import { items } from '../ItemDetailContainer/ItemDetailContainer';
+
 
 
 
@@ -8,44 +8,33 @@ import { items } from '../ItemDetailContainer/ItemDetailContainer';
 export const CartContext = createContext([])
 
 export const CartProvider = ({children}) => {
-    const [Items, setItems] = useState([])
+    const [items, setItems] = useState([])
 
-    const isInCart = (itemID) => {
-        const found = Items.find(item => item.id === itemID)
+    const isInCart = (id) => {
+        const found = items.find(item => item.id === id)
         return found
     }
 
-    const addItem = (item, cantidad) => {
+    const addItem = ( item, counter) => {
         isInCart(item.id)
         ?
-        setItems(Items.map((prod) => {
-            if (prod.id === item.id){
-                prod.cantidad += item.cantidad
-            } 
+        setItems(items.map((prod) => {
+            if(prod.id === item.id) {
+                prod.counter += counter
+                prod.precio = prod.precio * counter
+            }
+            return prod
         }))
         :
-        setItems([...Items, {id : item.id, nombre: item.nombre, precio: item.precio, cantidad: cantidad}])
+       setItems([...items, {id: item.id, nombre: item.nombre, precio: item.precio, imagen: item.imagen, counter: counter}])
+       console.log(items)
     }
-
-    // const deleteItem = (itemID, cantidad) => {
-
-    // }
-
-    // const quantityItem = () => {
-
-    // }
-    
-
 
 
     return (
         <CartContext.Provider value={{
-            Items,
+            items,
             addItem
-            // deleteItem,
-            // quantityItem
-            // totalPrice,
-            // emptyCart
         }}>
             {children}
         </CartContext.Provider>

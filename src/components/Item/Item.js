@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Image, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({ info, addItem, item }) => {
   return (

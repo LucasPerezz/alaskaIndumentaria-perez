@@ -7,7 +7,9 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ item }) => {
   const [add, setAdd] = useState(false)
-  // const {addItem} = useContext(CartContext)
+
+
+  const {addItem} = useContext(CartContext)
 
   const onAdd = () => {
       setAdd(!add)
@@ -36,7 +38,7 @@ const ItemDetail = ({ item }) => {
               add ?
               <Card.Header>Añadido</Card.Header>
               :
-              <ItemCount stock={item.stock} onAdd={onAdd} />
+              <ItemCount item={item} stock={item.stock} addItem={addItem} />
             }
           </div>
           <div>
