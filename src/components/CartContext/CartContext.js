@@ -30,11 +30,21 @@ export const CartProvider = ({children}) => {
        console.log(items)
     }
 
+    const removeItem = (id) => {
+        setItems(items.filter(item => item.id !== id))
+    }
+
+    const clearItems = () => {
+        setItems([])
+    }
+
 
     return (
         <CartContext.Provider value={{
             items,
-            addItem
+            addItem,
+            removeItem,
+            clearItems
         }}>
             {children}
         </CartContext.Provider>
