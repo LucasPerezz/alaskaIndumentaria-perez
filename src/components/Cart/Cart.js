@@ -6,10 +6,11 @@ import { Table, Button } from "semantic-ui-react";
 import { CartContext } from "../CartContext/CartContext";
 
 const Cart = () => {
-  const { items, addItem, removeItem, clearItems } = useContext(CartContext);
+  const { items, removeItem, clearItems, TotalPriceItems, productQuantity } = useContext(CartContext);
   console.log(items);
 
   return (
+
     <div>
       <Table singleLine className="my-5 container">
         <Table.Header>
@@ -41,8 +42,8 @@ const Cart = () => {
         <Table.Cell className='widthTable'><Button content='Limpiar carrito' secondary onClick={() => clearItems()}/></Table.Cell>
         <Table.Cell className='widthTable'></Table.Cell>
         <Table.Cell className='widthTable'></Table.Cell>
-        <Table.Cell className='widthTable'></Table.Cell>
-        <Table.Cell className='widthTable'>Total</Table.Cell>
+        <Table.Cell className='widthTable'>{productQuantity()}</Table.Cell>
+        <Table.Cell className='widthTable'>${TotalPriceItems()}</Table.Cell>
       </Table.Row>
         </Table.Body>
       </Table>
