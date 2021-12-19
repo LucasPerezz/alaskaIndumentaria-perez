@@ -36,7 +36,15 @@ const ItemDetail = ({ item }) => {
           <div className="my-4">
             {
               add ?
+              <div>
               <Card.Header>Añadido</Card.Header>
+              <Link to="/">
+              <Button
+                content="Continuar Comprando"
+                secondary
+              />
+              </Link>
+              </div>
               :
               <ItemCount item={item} stock={item.stock} addItem={addItem} onAdd={onAdd}/>
             }

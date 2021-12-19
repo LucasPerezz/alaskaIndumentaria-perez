@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
+
 //COMPONENTS
 import Nabvar from './components/Navbar/Navbar';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';

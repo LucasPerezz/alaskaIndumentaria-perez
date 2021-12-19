@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./ItemListContainer.css";
-import getFetch from "../../Fetch/getFetch";
+import { getFirestore } from "../services/getFirestore";
 import ItemList from "../ItemList/ItemList";
-import { Loader } from 'semantic-ui-react'
+import { Loader } from 'semantic-ui-react';
 import { useParams } from "react-router";
 
 
@@ -12,29 +12,29 @@ const ItemListContainer = () => {
   
   const [productos, setProductos] = useState ([])
   const [loading, setLoading] = useState(true)
-  
-
-  const {generoID} = useParams()
+  const { generoID } = useParams()
 
   useEffect(() => {
-    if (generoID) {
-      getFetch
-      .then(res => {
-        setProductos(res.filter(prod => prod.genero === generoID))
+    const db = getFirestore()
+    const alaskaProducts = db.collection("Productos")
+
+    if (!generoID) {
+      alaskaProducts.get().then((querySnapshot) => {
+        let content = []
+        querySnapshot.docs.map(doc => content.push({ id: doc.id, ...doc.data() }))
+        setProductos(content)
+        setLoading(false)
       })
-
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false))
     } else {
-        getFetch
-        .then(res => {
-          setProductos(res)
-        })
-
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false))
+      let generoItems = alaskaProducts.where('genero', '==', generoID)
+      generoItems.get().then((querySnapshot) => {
+        let content = []
+        querySnapshot.docs.map(doc => content.push({id: doc.id, ...doc.data()}))
+        setProductos(content)
+        setLoading(false)
+      })
     }
-  }, [generoID])
+	}, [generoID]);
   
 
 
