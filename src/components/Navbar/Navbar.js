@@ -25,7 +25,8 @@ function Nabvar () {
         </li>
       </ul>
     </div>
-    <Link to='/cart'><CartWidjet /></Link>
+      <CartWidjet />
+      
 </nav>
     ) 
 }

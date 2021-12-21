@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Button, Icon } from "semantic-ui-react";
+import { Button, Icon, Input } from "semantic-ui-react";
 
 import "./ItemCount.css";
 
@@ -20,17 +20,17 @@ const ItemCount = ({ item, stock, addItem, onAdd }) => {
 
   return (
     <Fragment>
-      <div className="counter">
-        <Button icon onClick={handlerCounterDown}>
-          <Icon name="minus" />
+      <div className="counter my-5 align-items-center mx-5">
+        <Button icon size="mini" color="black" onClick={handlerCounterDown}>
+          <Icon name="minus" size="small" />
         </Button>
         <p>{counter}</p>
-        <Button icon onClick={handlerCounterUp}>
-          <Icon name="plus" />
+        <Button icon size="mini" color="black" onClick={handlerCounterUp}>
+          <Icon name="plus" size="small"/>
         </Button>
       </div>
-      <div className="my-2">
-        <Button content="Comprar" negative onClick={() => {
+      <div className="my-5">
+        <Button content="Agregar al carrito" size="fluid" negative onClick={() => {
           addItem(item, counter)
           onAdd(true)}}/>
       </div>

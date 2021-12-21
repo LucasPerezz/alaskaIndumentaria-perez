@@ -1,7 +1,7 @@
 import React from "react";
-import { Card, Image, Button } from "semantic-ui-react";
+import { Card, Image, Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-
+import "../Item/Item.css"
 
 const Item = ({ info, addItem, item }) => {
   return (
@@ -13,21 +13,21 @@ const Item = ({ info, addItem, item }) => {
           border="0"
           wrapped
           ui={false}
-          className="imagenConfig"
         />
         <Card.Content>
-          <Card.Header>{info.nombre}</Card.Header>
-          <Card.Meta>
-            <span className="date">${info.precio}</span>
+          <Card.Header className="my-1"><span className="letterProduct">{info.nombre}</span></Card.Header>
+          <Card.Meta className="my-2">
+            <span className="letterPrice">${info.precio}</span>
           </Card.Meta>
         </Card.Content>
-        <Card.Content extra>
-          <Link to={`/item/${info.id}`}>
-            <br></br>
-            <Button content="Comprar" secondary />
-            <br></br>
+          <Link to={`/item/${info.id}`} className="buttonShop">
+            <Button animated="vertical mb-4">
+              <Button.Content hidden>Agregar</Button.Content>
+              <Button.Content visible>
+                <Icon name="shop" />
+              </Button.Content>
+            </Button>
           </Link>
-        </Card.Content>
       </Card>
     </div>
   );
