@@ -4,6 +4,7 @@ import { Table, Button } from "semantic-ui-react";
 
 //CONTEXT
 import { CartContext } from "../CartContext/CartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { items, removeItem, clearItems, TotalPriceItems, productQuantity } =
@@ -55,6 +56,12 @@ const Cart = () => {
                 secondary
                 onClick={() => clearItems()}
               />
+              <Link to='/cart/checkout'>
+              <Button
+                content="Procesar Compra"
+                secondary
+              />
+              </Link>
             </Table.Cell>
           </Table.Row>
         </Table.Body>

@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { CartProvider } from './components/CartContext/CartContext';
+import Checkout from './components/Checkout/Checkout';
 
 
 
@@ -28,6 +29,7 @@ class App extends Component{
           <Route path='/' element={<ItemListContainer />}/>
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/cart/checkout' element={<Checkout />} />
         </Routes>
         </Router>
         </CartProvider>
