@@ -1,145 +1,132 @@
 import React, { Fragment, useContext, useState } from "react";
-import { Form, Button, Table, Input, Label, Loader } from "semantic-ui-react";
+import {
+  Form,
+  Button,
+  Table,
+  Input,
+  Label,
+  Message,
+  Icon,
+  Loader,
+} from "semantic-ui-react";
 import { CartContext } from "../CartContext/CartContext";
 import { getFirestore } from "../services/getFirestore";
 
-
-
 const infoClient = {
-    nombre: " ",
-    apellido: " ",
-    celular: " ",
-    email: " "
-}
+  nombre: " ",
+  apellido: " ",
+  celular: " ",
+  email: " ",
+};
 
 const Checkout = () => {
-    const { items } = useContext(CartContext)
-    const [Client, setClient] = useState(infoClient)
-    const [purchaseID, setPurchaseID] = useState('')
-    const [Loading, setLoading] = useState(false)
+  const { items } = useContext(CartContext);
+  const [Client, setClient] = useState(infoClient);
+  const [purchaseID, setPurchaseID] = useState("");
+  const [Loading, setLoading] = useState(false);
+  const shopConfirm = (e) => {
+    const { name, value } = e.target;
+    setClient({ ...Client, [name]: value, items });
+  };
 
-    const shopConfirm = (e) => {
-      const { nombre, value } = e.target
-      setClient({...Client, [nombre] : value})
-      console.log(Client)
-    }
+  const dataClient = async (e) => {
+    setLoading(true);
+    e.preventDefault();
+    const db = getFirestore();
+    const docRef = await db.collection("clientes").add(Client);
+    setPurchaseID(docRef.id);
 
-    const dataClient = async (e) => {
-      setLoading(true)
-      e.preventDefault()
-      const db = getFirestore()
-      const docRef = db.collection('clientes').add(Client)
-
-      setPurchaseID(docRef)
-      setTimeout(() => {
-        setLoading(false)
-        setClient(infoClient)
-      }, 1000)
-
-    }
-
+    setTimeout(() => {
+      setLoading(false);
+      setClient(infoClient);
+      console.log(purchaseID);
+    }, 2000);
+  };
 
   return (
-      <Fragment>
-    <div>
-      <Form className="w-50 mx-auto my-5" onSubmit={dataClient}>
-        <Form.Field>
-          <label>Nombre/s</label>
-          <Input onChange={shopConfirm} name='nombre'/>
-          <Label pointing>Ingrese su nombre</Label>
-        </Form.Field>
-        <Form.Field>
-          <label>Apellido/s</label>
-          <Input onChange={shopConfirm}/>
-          <Label pointing>Ingrese su apellido</Label>
-        </Form.Field>
-        <Form.Field>
-          <label>Celular</label>
-          <Input onChange={shopConfirm}/>
-          <Label pointing>Ingrese su numero de telefono</Label>
-        </Form.Field>
-        <Form.Field>
-          <label>Email</label>
-          <Input onChange={shopConfirm}/>
-          <Label pointing>Ingrese su correo electronico</Label>
-        </Form.Field>
-      </Form>
-
-{/* <form className='form-container'>
-				<Input
-					className='form-input'
-					placeholder='Name'
-					name='name'
-					value={Client.nombre}
-					onChange={shopConfirm}
-				/>
-				<Input
-					className='form-input'
-					placeholder='LastName'
-					name='lastName'
-					value={Client.apellido}
-					onChange={shopConfirm}
-				/>
-				<Input
-					className='form-input'
-					placeholder='Email'
-					name='email'
-					value={Client.celular}
-					onChange={shopConfirm}
-				/>
-				<Input
-					className='form-input'
-					placeholder='Adress'
-					name='adress'
-					value={Client.email}
-					onChange={shopConfirm}
-				/>
-				<Button className='form-btn' primary>
-					Send
-				</Button>
-			</form> */}
-
-    </div>
-    <div className="w-50 mx-auto">
-    <Table compact color="grey" inverted>
-    <Table.Header>
-      <Table.Row>
-        <Table.HeaderCell>Producto</Table.HeaderCell>
-        <Table.HeaderCell>Precio</Table.HeaderCell>
-      </Table.Row>
-    </Table.Header>
-    </Table>
-    <Table.Body>
-        {
-          items.map((item) => {
-            return(
-              <Table.Row>
-                    <Table.Cell> 
-                    <img
-                    src={item.imagen}
-                    alt={item.nombre}
-                    className="w-25"
-                  ></img></Table.Cell>
-                    <Table.Cell>${item.precio}</Table.Cell>
+    <Fragment>
+      <div>
+        <Form className="w-50 mx-auto my-5" onSubmit={dataClient}>
+          <Form.Field>
+            <label>Nombre/s</label>
+            <Input onChange={shopConfirm} name="nombre" value={Client.nombre} />
+            <Label pointing>Ingrese su nombre</Label>
+          </Form.Field>
+          <Form.Field>
+            <label>Apellido/s</label>
+            <Input
+              onChange={shopConfirm}
+              name="apellido"
+              value={Client.apellido}
+            />
+            <Label pointing>Ingrese su apellido</Label>
+          </Form.Field>
+          <Form.Field>
+            <label>Celular</label>
+            <Input
+              onChange={shopConfirm}
+              name="celular"
+              value={Client.celular}
+            />
+            <Label pointing>Ingrese su numero de telefono</Label>
+          </Form.Field>
+          <Form.Field>
+            <label>Email</label>
+            <Input onChange={shopConfirm} name="email" value={Client.email} />
+            <Label pointing>Ingrese su correo electronico</Label>
+          </Form.Field>
+          <div className="w-50 mx-auto">
+            <Table compact color="grey" inverted>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Producto</Table.HeaderCell>
+                  <Table.HeaderCell>Precio</Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+            </Table>
+            <Table.Body>
+              {items.map((item) => {
+                return (
+                  <Table.Row>
+                    <Table.Cell>
+                      <img
+                        src={item.imagen}
+                        alt={item.nombre}
+                        className="w-25"
+                      ></img>
+                    </Table.Cell>
+                    <Table.Cell className="text-center">
+                      ${item.precio}
+                    </Table.Cell>
                   </Table.Row>
-                )
-              })
-            }
-    </Table.Body>
-    <Button type="submit" className="my-4 d-block mx-auto">Confirmar compra</Button>
+                );
+              })}
+            </Table.Body>
+            <Button
+              type="submit"
+              className="my-4 d-block mx-auto"
+              onSubmit={dataClient}
+            >
+              Confirmar compra
+            </Button>
+          </div>
+        </Form>
 
-            {
-              Loading ? (
-                <Loader active />
-              ) 
-              :
-              purchaseID.id && (
-                <div>
-                    <p>purchaseID</p> 
-                </div>
-              )
-            }
-    </div>
+        <div className="w-25 mx-auto">
+          {Loading ? (
+            <Loader active inline className="mx-auto d-block" />
+          ) : (
+            purchaseID && (
+              <Message icon>
+                <Message.Content>
+                  <Message.Header>Su id de compra es</Message.Header>
+                  {purchaseID}
+                </Message.Content>
+              </Message>
+            )
+          )}
+        </div>
+      </div>
     </Fragment>
   );
 };

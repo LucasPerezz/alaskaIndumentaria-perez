@@ -56,11 +56,8 @@ const Cart = () => {
                 secondary
                 onClick={() => clearItems()}
               />
-              <Link to='/cart/checkout'>
-              <Button
-                content="Procesar Compra"
-                secondary
-              />
+              <Link to="/cart/checkout">
+                <Button content="Procesar Compra" secondary />
               </Link>
             </Table.Cell>
           </Table.Row>

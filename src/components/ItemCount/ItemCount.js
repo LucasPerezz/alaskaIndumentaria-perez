@@ -26,13 +26,19 @@ const ItemCount = ({ item, stock, addItem, onAdd }) => {
         </Button>
         <p>{counter}</p>
         <Button icon size="mini" color="black" onClick={handlerCounterUp}>
-          <Icon name="plus" size="small"/>
+          <Icon name="plus" size="small" />
         </Button>
       </div>
       <div className="my-5">
-        <Button content="Agregar al carrito" size="fluid" negative onClick={() => {
-          addItem(item, counter)
-          onAdd(true)}}/>
+        <Button
+          content="Agregar al carrito"
+          size="fluid"
+          negative
+          onClick={() => {
+            addItem(item, counter);
+            onAdd(true);
+          }}
+        />
       </div>
     </Fragment>
   );
