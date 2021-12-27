@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Button, Icon, Input } from "semantic-ui-react";
+import { Button, Icon } from "semantic-ui-react";
 
 import "./ItemCount.css";
 
@@ -13,7 +13,7 @@ const ItemCount = ({ item, stock, addItem, onAdd }) => {
   };
 
   const handlerCounterDown = () => {
-    if (counter != 1) {
+    if (counter !== 1) {
       setCounter(counter - 1);
     }
   };

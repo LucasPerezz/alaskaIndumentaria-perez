@@ -6,17 +6,17 @@ import {
   Input,
   Label,
   Message,
-  Icon,
-  Loader,
+  Loader
 } from "semantic-ui-react";
 import { CartContext } from "../CartContext/CartContext";
 import { getFirestore } from "../services/getFirestore";
+
 
 const infoClient = {
   nombre: " ",
   apellido: " ",
   celular: " ",
-  email: " ",
+  email: " "
 };
 
 const Checkout = () => {

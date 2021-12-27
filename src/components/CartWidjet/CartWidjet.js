@@ -9,7 +9,7 @@ const CartWidjet = () => {
   let itemsInCart = 0;
 
   items.map((item) => {
-    itemsInCart = itemsInCart + item.counter;
+    return itemsInCart = itemsInCart + item.counter;
   });
 
   return (
