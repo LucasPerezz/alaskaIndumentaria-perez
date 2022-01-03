@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## Alaska Indumentaria
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Es una app e-commerce que utiliza filtros para encontrar productos, construida con React, JavaScript y CSS, usando Firebase como base de datos y utilizando diferentes librerias para lograr un diseño simple y bonito. 
 
-## Available Scripts
+## Screenshots del proyecto
 
-In the project directory, you can run:
+insertar gif!!!!
 
-### `npm start`
+## Instrucciones de instalacion y configuracion
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clona este repositorio. Necesitará `node` y` npm` instalados globalmente en su computadora.  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Instalacion:
 
-### `npm test`
+`npm install`  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para ejecutar Test Suite:  
 
-### `npm run build`
+`npm test`  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para iniciar el servidor:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm start`  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para visitar la aplicación:
 
-### `npm run eject`
+`localhost:3000/`  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Librerias
+Las librerias que utilice para desarrollar esta app son: 
+-Semantic UI: Por su facil uso con react a la hora de integrar componentes y utilizarlos a mi gusto.
+-Boostrap: Por su manejo de clases para darle estilo a la app.
+-Firebase: Para tener una base de datos desde donde puedo trabajar con la informacion de mis productos, ademas de que me permite generar ordenes de compra a nombre del usuario, email e ID propio
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencias
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "firebase": "^8.10.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.4",
+    "web-vitals": "^1.1.2"
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Objetivo
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desarrollar un e-commerce con las herramientas que me dieron en los cursos que desarrolle en CoderHouse, en resumen consiste en una aplicacion para comprar ropa en el cual el proyecto tiene un diseño modular, como ofrece React, donde los componenetes se encuentran en carpetas separadas con sus respectivos archivos. Los diseños estaran, en general, en su archivo aparte CSS y ademas utilizo bootstrap para usar sus clases y Semantic UI. 

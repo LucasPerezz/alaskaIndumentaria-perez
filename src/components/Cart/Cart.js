@@ -1,6 +1,6 @@
 import "./Cart.css";
 import React, { useContext, Fragment } from "react";
-import { Table, Button } from "semantic-ui-react";
+import { Table, Button, Icon } from "semantic-ui-react";
 
 //CONTEXT
 import { CartContext } from "../CartContext/CartContext";
@@ -17,15 +17,15 @@ const Cart = () => {
         <Table singleLine className="my-5 container">
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell className="widthTable">Imagen</Table.HeaderCell>
-              <Table.HeaderCell className="widthTable">
+              <Table.HeaderCell className="widthTable w-25">Imagen</Table.HeaderCell>
+              <Table.HeaderCell className="widthTable w-25">
                 Producto
               </Table.HeaderCell>
-              <Table.HeaderCell className="widthTable">
+              <Table.HeaderCell className="widthTable w-25">
                 Cantidad
               </Table.HeaderCell>
-              <Table.HeaderCell className="widthTable">Precio</Table.HeaderCell>
-              <Table.HeaderCell className="widthTable"></Table.HeaderCell>
+              <Table.HeaderCell className="widthTable w-25">Precio</Table.HeaderCell>
+              <Table.HeaderCell className="widthTable w-25"></Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -43,9 +43,7 @@ const Cart = () => {
                   <Table.Cell className="widthTable">{item.counter}</Table.Cell>
                   <Table.Cell className="widthTable">${item.precio}</Table.Cell>
                   <Table.Cell>
-                    <Button primary onClick={() => removeItem(item.id)}>
-                      X
-                    </Button>
+                    <Icon name='times' size='large' onClick={() => removeItem(item.id)}/>
                   </Table.Cell>
                 </Table.Row>
               );

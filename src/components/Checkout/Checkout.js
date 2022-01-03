@@ -12,21 +12,29 @@ import { CartContext } from "../CartContext/CartContext";
 import { getFirestore } from "../services/getFirestore";
 
 
-const infoClient = {
-  nombre: " ",
-  apellido: " ",
-  celular: " ",
-  email: " "
-};
+
+
 
 const Checkout = () => {
+  const {productQuantity, TotalPriceItems} = useContext(CartContext)
+  
   const { items } = useContext(CartContext);
+
+  const infoClient = {
+    nombre: " ",
+    apellido: " ",
+    celular: " ",
+    email: " ",
+    Cantidad: productQuantity(),
+    Total: TotalPriceItems()
+  };
+
   const [Client, setClient] = useState(infoClient);
   const [purchaseID, setPurchaseID] = useState("");
   const [Loading, setLoading] = useState(false);
   const shopConfirm = (e) => {
     const { name, value } = e.target;
-    setClient({ ...Client, [name]: value, items });
+    setClient({ ...Client, [name]: value, items});
   };
 
   const dataClient = async (e) => {
