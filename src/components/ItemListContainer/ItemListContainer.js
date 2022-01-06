@@ -4,6 +4,8 @@ import { getFirestore } from "../services/getFirestore";
 import ItemList from "../ItemList/ItemList";
 import { Loader } from "semantic-ui-react";
 import { useParams } from "react-router";
+import Footer from "../Footer/Footer";
+import StorePresentation from "../StorePresentation/StorePresentation";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -37,9 +39,18 @@ const ItemListContainer = () => {
   }, [generoID]);
 
   return (
-    <div className="container my-5">
-      <div className="itemListContainer">
-        {loading ? <Loader active /> : <ItemList productos={productos} />}
+    <div className="container my-1">
+      <div className="itemListContainer container">
+        {loading ? <Loader active /> : 
+        <div>
+         <div className="my-5">
+        <StorePresentation />
+        </div>
+        <p className="fontStorePresentation">Nuestros productos</p>
+        <ItemList productos={productos} />
+        <Footer />
+        </div>
+        }
       </div>
     </div>
   );

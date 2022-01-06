@@ -4,7 +4,11 @@ Es una app e-commerce que utiliza filtros para encontrar productos, construida c
 
 ## Screenshots del proyecto
 
-insertar gif!!!!
+# GIF DEL PROYECTO
+https://drive.google.com/file/d/1lVXoSp_h4fcXQRW7nrzv4KDpMQqyWpJB/view?usp=sharing
+
+# IMAGEN DEL PROYECTO
+https://i.ibb.co/p4f8cY7/captura-Alaska.jpg
 
 ## Instrucciones de instalacion y configuracion
 

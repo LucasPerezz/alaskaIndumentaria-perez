@@ -43,15 +43,6 @@ function Nabvar() {
               Hombre
             </Link>
           </li>
-          <li class="nav-item">
-            <Link
-              to="/contacto"
-              className="nav-link active fontType nav-link"
-              aria-current="page"
-            >
-              Contacto
-            </Link>
-          </li>
         </ul>
       </div>
 

@@ -17,7 +17,7 @@ import { getFirestore } from "../services/getFirestore";
 
 const Checkout = () => {
   const {productQuantity, TotalPriceItems} = useContext(CartContext)
-  
+
   const { items } = useContext(CartContext);
 
   const infoClient = {

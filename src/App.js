@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //COMPONENTS
 import Nabvar from "./components/Navbar/Navbar";
