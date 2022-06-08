@@ -20,19 +20,18 @@ const ItemCount = ({ item, stock, addItem, onAdd }) => {
 
   return (
     <Fragment>
-      <div className="counter my-5 align-items-center mx-5">
-        <Button icon size="mini" color="black" onClick={handlerCounterDown}>
-          <Icon name="minus" size="small" />
+      <div className="counter">
+        <Button icon size="mini" onClick={handlerCounterDown}>
+          <Icon name="minus" size="mid" />
         </Button>
-        <p>{counter}</p>
-        <Button icon size="mini" color="black" onClick={handlerCounterUp}>
-          <Icon name="plus" size="small" />
+        <p className="counterText">{counter}</p>
+        <Button icon size="mini" onClick={handlerCounterUp}>
+          <Icon name="plus" size="mid" />
         </Button>
       </div>
-      <div className="my-5">
+      <div className="addToCartButton">
         <Button
-          content="Agregar al carrito"
-          size="fluid"
+          content="COMPRAR"
           negative
           onClick={() => {
             addItem(item, counter);

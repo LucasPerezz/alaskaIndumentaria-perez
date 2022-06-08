@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <div className="container d-flex justify-content-center my-5">
+    <div>
       {loading ? <Loader active /> : <ItemDetail item={itemDetail} />}
     </div>
   );

@@ -51,6 +51,9 @@ export const CartProvider = ({ children }) => {
     return items.reduce((acum, value) => acum + value.counter, 0);
   };
 
+
+
+
   return (
     <CartContext.Provider
       value={{

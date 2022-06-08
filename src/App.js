@@ -10,6 +10,7 @@ import Cart from "./components/Cart/Cart";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import { CartProvider } from "./components/CartContext/CartContext";
 import Checkout from "./components/Checkout/Checkout";
+import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
               <Route path="/cart" element={<Cart />} />
               <Route path="/cart/checkout" element={<Checkout />} />
             </Routes>
+            <Footer />
           </Router>
         </CartProvider>
       </Fragment>

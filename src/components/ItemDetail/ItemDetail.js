@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
   return (
     <div className="ItemDetailStyle">
       <div className="ItemDetailImage">
-        <Image src={item.imagen} size="big" alt={item.nombre} />
+        <Image src={item.imagen} size="big" alt={item.nombre} className="imageProduct"/>
       </div>
 
       <div className="ItemDetailInfo">
@@ -31,21 +31,19 @@ const ItemDetail = ({ item }) => {
 
         <div className="my-5">
           {add ? (
-            <div>
-              <Card.Header className="my-5 d-flex justify-content-center fs-3">
+            <div className="buttonContainer">
+              <Card.Header className="addedToCart">
                 Añadido
               </Card.Header>
               <Link to="/">
                 <Button
                   content="Continuar Comprando"
-                  secondary
-                  size="fluid"
-                  className="my-2"
+                  className="my-2 continueShopping"
                 />
               </Link>
               <div>
                 <Link to="/cart">
-                  <Button content="Finalizar Compra" secondary size="fluid" />
+                  <Button content="Finalizar Compra"  className="finishShop"/>
                 </Link>
               </div>
             </div>
