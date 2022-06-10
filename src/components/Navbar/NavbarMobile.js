@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom'
 const NavbarMobile = () => {
 
 
-    const [ pageActive, setPageActive ] = useState('')
+    const [ pageActive, setPageActive ] = useState()
 
     const pageActiveChange = (page) => {
         setPageActive(page)
     }
-
 
 
   return (
@@ -18,7 +17,10 @@ const NavbarMobile = () => {
         <nav>
             <ul className='navbarContai'>
                 <Link to="/">
-                    <li onClick={() => pageActiveChange('hombre')} className={pageActive === 'home' ? "navbarContaiActive" : "navbarContaiDesactive"}>Home</li>            
+                    <li onClick={() => pageActiveChange('')} className={pageActive === '' ? "navbarContaiActive" : "navbarContaiDesactive"}>Home</li>            
+                </Link>
+                <Link to="/productos">
+                    <li onClick={() => pageActiveChange('home')} className={pageActive === 'home' ? "navbarContaiActive" : "navbarContaiDesactive"}>Nuestros productos</li>            
                 </Link>
                 <Link to="/genero/hombre">
                     <li onClick={() => pageActiveChange('hombre')} className={pageActive === 'hombre' ? "navbarContaiActive" : "navbarContaiDesactive"}>Hombre</li>         
@@ -26,7 +28,9 @@ const NavbarMobile = () => {
                 <Link to="/genero/mujer">
                     <li onClick={() => pageActiveChange('mujer')} className={pageActive === 'mujer' ? "navbarContaiActive" : "navbarContaiDesactive"}>Mujer</li>           
                 </Link>
+                <Link to="/cart">
                     <li onClick={() => pageActiveChange('shopping')} className={pageActive === 'shopping' ? "navbarContaiActive" : "navbarContaiDesactive"}>Shopping</li> 
+                </Link>   
             </ul>
         </nav>
     </>

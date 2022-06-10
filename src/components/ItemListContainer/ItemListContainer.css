@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;400&family=Yanone+Kaffeesatz:wght@500&display=swap');
 
 .itemListContainer{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    width: 100%;
 }
 
 .fontStorePresentation{

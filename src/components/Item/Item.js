@@ -6,7 +6,7 @@ import "../Item/Item.css";
 const Item = ({ info, addItem, item }) => {
   return (
     <div>
-      <Card key={info.id}>
+      <Card key={info.id} className="itemContainer">
         <Image
           src={info.imagen}
           alt="Whats-App-Image-2021-11-17-at-22-57-24"

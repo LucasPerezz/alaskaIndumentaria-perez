@@ -27,12 +27,22 @@
     background: rgb(215, 130, 255) !important;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .counter {
         width: 100%;
     }
 
     .addToCartButton button {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .addToCartButton button {
+        width: 350px;
+    }
+
+    .counter {
+        width: 250px;
     }
 }

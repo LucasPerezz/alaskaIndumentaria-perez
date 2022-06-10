@@ -29,13 +29,13 @@ const ItemDetail = ({ item }) => {
           ${item.precio}
         </Header>
 
-        <div className="my-5">
+        <div className="my-5 buttonPlace">
           {add ? (
             <div className="buttonContainer">
               <Card.Header className="addedToCart">
                 Añadido
               </Card.Header>
-              <Link to="/">
+              <Link to="/productos">
                 <Button
                   content="Continuar Comprando"
                   className="my-2 continueShopping"

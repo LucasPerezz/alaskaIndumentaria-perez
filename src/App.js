@@ -11,6 +11,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import { CartProvider } from "./components/CartContext/CartContext";
 import Checkout from "./components/Checkout/Checkout";
 import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
 
 class App extends Component {
   render() {
@@ -20,8 +21,9 @@ class App extends Component {
           <Router>
             <Nabvar />
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/genero/:generoID" element={<ItemListContainer />} />
-              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/productos" element={<ItemListContainer />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/cart/checkout" element={<Checkout />} />

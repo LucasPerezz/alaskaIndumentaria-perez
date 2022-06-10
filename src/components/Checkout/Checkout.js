@@ -54,7 +54,7 @@ const Checkout = () => {
   return (
     <Fragment>
       <div>
-        <Form className="w-50 mx-auto my-5" onSubmit={dataClient}>
+        <Form className="w-75 mx-auto my-5" onSubmit={dataClient}>
           <Form.Field>
             <label>Nombre/s</label>
             <Input onChange={shopConfirm} name="nombre" value={Client.nombre} />
@@ -83,7 +83,7 @@ const Checkout = () => {
             <Input onChange={shopConfirm} name="email" value={Client.email} />
             <Label pointing>Ingrese su correo electronico</Label>
           </Form.Field>
-          <div className="w-50 mx-auto">
+          <div className="w-100 mx-auto">
             <Table compact color="grey" inverted>
               <Table.Header>
                 <Table.Row>
@@ -120,7 +120,7 @@ const Checkout = () => {
           </div>
         </Form>
 
-        <div className="w-25 mx-auto">
+        <div className="w-75 mx-auto">
           {Loading ? (
             <Loader active inline className="mx-auto d-block" />
           ) : (

@@ -13,12 +13,13 @@ const CartWidjet = () => {
   });
 
   return (
-    <Link to="/cart">
-      <div className="cartImage">
+    <>
+    <div className="cartImage">
         <div className="itemsInCart text-dark">{itemsInCart}</div>
         <Icon disabled name="shopping bag" color="violet" size="big" />
       </div>
-    </Link>
+    
+    </>
   );
 };
 

@@ -2,18 +2,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;400&family=Yanone+Kaffeesatz:wght@500&display=swap');
 
 .letterPrice{
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
     color: #000000;
+    font-style: italic;
 }
 
 .letterProduct{
     font-size: 20px;
     font-family: 'Pacifico', cursive;
-    color: black;
+    color: rgb(51, 51, 51);
     font-weight: 400;
 }
 
 .buttonShop{
     margin: auto;
+}
+
+.itemContainer {
+    width: 300px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.048) !important;
+    border: none;
+}
+
+@media screen and (max-width: 600px) {
+    .itemContainer {
+        width: 150px !important;
+        height: 270px;
+    }
+
+    .letterPrice {
+        font-size: 12px;
+    }
+
+    .letterProduct {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .itemContainer {
+        width: 200px !important;
+        height: 320px;
+    }
+
+    .letterPrice {
+        font-size: 14px;
+    }
+
+    .letterProduct {
+        font-size: 18px;
+    }
 }

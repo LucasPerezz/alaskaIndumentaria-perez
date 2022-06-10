@@ -1,3 +1,5 @@
 .cartImage{
-    margin-right: 20px;
+    display: flex;
+    height: max-content;
+    justify-content: center;
 }
