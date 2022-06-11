@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Icon } from "semantic-ui-react";
 import { CartContext } from "../CartContext/CartContext";
-import { Link } from "react-router-dom";
 import "./CartWidjet.css";
 
 const CartWidjet = () => {

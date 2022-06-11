@@ -2,7 +2,7 @@ nav {
     min-height: 100vh;
     position: absolute;
     background-color: rgb(255, 255, 255);
-    width: 100vw;
+    width: 50vw;
     z-index: 999;
 }
 
@@ -27,4 +27,13 @@ nav {
     font-weight: 400;
     list-style: none;
     color: rgb(215, 130, 255);
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 100vw;
+        z-index: 99999;
+    }
+
+
 }

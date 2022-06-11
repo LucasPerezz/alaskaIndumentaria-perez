@@ -22,7 +22,7 @@ class App extends Component {
             <Nabvar />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/genero/:generoID" element={<ItemListContainer />} />
+              <Route path="/:generoID" element={<ItemListContainer />} />
               <Route path="/productos" element={<ItemListContainer />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<Cart />} />

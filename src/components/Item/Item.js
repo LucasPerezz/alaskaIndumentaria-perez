@@ -13,6 +13,7 @@ const Item = ({ info, addItem, item }) => {
           border="0"
           wrapped
           ui={false}
+          className="imageItem"
         />
         <Card.Content>
           <Card.Header className="my-1">
