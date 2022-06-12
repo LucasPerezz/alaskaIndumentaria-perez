@@ -36,7 +36,7 @@
 }
 
 .cartFooter {
-    background-color: rgb(242, 215, 255);
+    background-color: rgb(255, 252, 246);
     height: 5vh;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .cartFooterButtons ul li button {
-    border: 1px solid rgb(215, 130, 255);
+    border: 1px solid rgb(255, 225, 160);
     background-color: #fff;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
@@ -80,7 +80,7 @@
 }
 
 .cartFooterButtons ul li button:hover {
-    background-color: rgb(215, 130, 255);
+    background-color: rgb(255, 225, 160);
     border: 1px solid #fff;
     color: #fff;
 }

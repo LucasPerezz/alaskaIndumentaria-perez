@@ -48,7 +48,7 @@
     color: black;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .navbarContainer {
         width: 100vw;
         height: 10vh;
@@ -56,5 +56,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .shoppingCart {
+        margin-right: 12px;
     }
 }

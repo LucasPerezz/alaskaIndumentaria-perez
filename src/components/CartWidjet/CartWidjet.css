@@ -3,3 +3,7 @@
     height: max-content;
     justify-content: center;
 }
+
+.iconColor {
+    color: rgb(255, 180, 20);
+}

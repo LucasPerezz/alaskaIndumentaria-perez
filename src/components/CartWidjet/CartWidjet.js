@@ -15,7 +15,7 @@ const CartWidjet = () => {
     <>
     <div className="cartImage">
         <div className="itemsInCart text-dark">{itemsInCart}</div>
-        <Icon disabled name="shopping bag" color="violet" size="big" />
+        <Icon disabled name="shopping bag" className="iconColor" size="big" />
       </div>
     
     </>

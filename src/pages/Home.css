@@ -26,7 +26,7 @@
     margin: 0 auto;
     width: 200px;
     height: 60px;
-    border: 1px solid rgb(153, 105, 0);
+    border: 1px solid rgb(255, 225, 160);
     border-radius: 12px;
     font-size: 20px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -38,7 +38,7 @@
 
 .homeContainer button:hover {
     border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(153, 105, 0);
+    background-color: rgb(255, 225, 160);
     color: white !important;
 } 
 
@@ -51,6 +51,7 @@
     border-right: 1px solid rgb(255, 255, 255);
     filter: opacity(100%);
     border-style: hidden;
+    object-fit: cover;
 }
 
 .imageMobile {

@@ -9,18 +9,18 @@ const StorePresentation = () => {
         <Carousel.Item>
           <img
             className="d-block carouselSetup"
-            src="https://i.ibb.co/XLt95nX/carousel1ai.jpg"
+            src="https://i.ibb.co/NVxJDjd/665f7d11-0837-44d5-89bf-902412637070-2.jpg"
             alt="Alaska indumentaria"
           />
           <Carousel.Caption>
             <h3 className="fontSetUp">Alaska Indumentaria</h3>
-            <p className="fontSetUpDesc">Empeza el año de la mejor forma</p>
+            <p className="fontSetUpDesc">Resguardate del frio de la mejor forma</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block carouselSetup"
-            src="https://i.ibb.co/HxFdqDP/Whats-App-Image-2021-11-17-at-22-57-33.jpg"
+            src="https://i.ibb.co/SVMD8QC/ad8546dd-5488-42d3-a6b7-8ce86d6a73a8-1.jpg"
             alt="Alaska indumentaria"
           />
 
@@ -32,12 +32,12 @@ const StorePresentation = () => {
         <Carousel.Item>
           <img
             className="d-block carouselSetup"
-            src="https://i.ibb.co/RPTj6sZ/Whats-App-Image-2021-11-17-at-22-57-26.jpg"
+            src="https://i.ibb.co/zGPrd5B/uawdhaw221wad.jpg"
             alt="Alaska indumentaria"
           />
 
           <Carousel.Caption>
-            <h3 className="fontSetUp">La mejor calidad y atencion</h3>
+            <h3 className="fontSetUp">Calidad y atencion</h3>
             <p className="fontSetUpDesc">Para dar el maximo confort a nuestros amados clientes</p>
           </Carousel.Caption>
         </Carousel.Item>
